@@ -1,0 +1,13 @@
+language: node_js
+
+node_js:
+  - "9"
+  - "8"
+  - "6"
+  - "10"
+
+script:
+  - npm run test:cov
+  - bash <(curl -s https://codecov.io/bash)
+  - npm run build
+  - npm run semantic-release || true
