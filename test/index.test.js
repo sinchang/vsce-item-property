@@ -11,9 +11,21 @@ test('ok', async () => {
 })
 
 test('wrong itemName', async () => {
-  const itemName = 'test'
-  const res = await vsceItemProperty(itemName)
-  expect(res).toBe('Bad Request')
+  let itemName = 'test'
+
+  try {
+    await vsceItemProperty(itemName)
+  } catch (e) {
+    expect(e).toEqual('Bad Request')
+  }
+
+  itemName = 'vscodevim.vim23'
+
+  try {
+    await vsceItemProperty(itemName)
+  } catch (e) {
+    expect(e.message).toEqual('Not Found')
+  }
 })
 
 test('empty itemName', async () => {

@@ -1,9 +1,7 @@
 
 # vsce-item-property
 
-[![NPM version](https://img.shields.io/npm/v/vsce-item-property.svg?style=flat)](https://npmjs.com/package/vsce-item-property) 
-[![NPM downloads](https://img.shields.io/npm/dm/vsce-item-property.svg?style=flat)](https://npmjs.com/package/vsce-item-property)  
-[![codecov](https://codecov.io/gh/sinchang/vsce-item-property/branch/master/graph/badge.svg)](https://codecov.io/gh/sinchang/vsce-item-property)
+[![NPM version](https://img.shields.io/npm/v/vsce-item-property.svg?style=flat)](https://npmjs.com/package/vsce-item-property) [![NPM downloads](https://img.shields.io/npm/dm/vsce-item-property.svg?style=flat)](https://npmjs.com/package/vsce-item-property)  [![codecov](https://codecov.io/gh/sinchang/vsce-item-property/branch/master/graph/badge.svg)](https://codecov.io/gh/sinchang/vsce-item-property) [![Build Status](https://travis-ci.com/sinchang/vsce-item-property.svg?branch=master)](https://travis-ci.com/sinchang/vsce-item-property)
 
 ## Install
 

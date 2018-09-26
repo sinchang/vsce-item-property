@@ -4,7 +4,7 @@ const got = require('got')
 
 module.exports = async(itemName) => {
   if (typeof itemName !== 'string') {
-    throw new Error('Expected itemName to be string')
+    return Promise.reject(new Error('Expected itemName to be string'))
   }
 
   try {
@@ -29,28 +29,38 @@ module.exports = async(itemName) => {
     })
 
     const itemValue = JSON.parse(response.body).results[0].extensions[0]
+
+    if (!itemValue) {
+      return Promise.reject(new Error('Not Found'))
+    }
+
     const obj = {
       publisherName: itemValue.publisher.publisherName,
       name: itemValue.displayName,
       lastUpdated: itemValue.lastUpdated,
-      releaseDate: itemName.releaseDate,
+      releaseDate: itemValue.releaseDate,
       publishedDate: itemValue.publishedDate,
       shortDescription: itemValue.shortDescription,
       version: itemValue.versions[0].version
     }
+
+    let installCount, updateCount
 
     if (itemValue.statistics && itemValue.statistics.length > 0) {
       itemValue.statistics.forEach(v => {
         const statisticName = v.statisticName
         const value = v.value
 
-        if (statisticName === 'install') obj.downloadCount = value
+        if (statisticName === 'install') installCount = value
+        if (statisticName === 'updateCount') updateCount = value
         if (statisticName === 'averagerating') obj.ratingValue = value
         if (statisticName === 'ratingcount') obj.ratingCount = value
       })
+
+      obj.downloadCount = Number(installCount) + Number(updateCount)
     }
-    return obj
+    return Promise.resolve(obj)
   } catch (error) {
-    return error.statusMessage
+    return Promise.reject(error.statusMessage)
   }
 }
