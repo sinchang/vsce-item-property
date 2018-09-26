@@ -14,8 +14,22 @@ npm i vsce-item-property
 ```js
 const vsceItemProperty = require('vsce-item-property')
 
-vsceItemProperty()
-//=> foo
+vsceItemProperty('vscodevim.vim')
+  .then(res => console.log(res))
+  .catch(err => console.log(err))
+
+// => 
+{ publisherName: 'vscodevim',
+  name: 'Vim',
+  lastUpdated: '2018-09-21T07:23:39.407Z',
+  releaseDate: '2015-11-29T10:38:55.38Z',
+  publishedDate: '2015-11-29T10:38:55.38Z',
+  shortDescription: 'Vim emulation for Visual Studio Code',
+  version: '0.16.5',
+  ratingValue: 4.284768104553223,
+  ratingCount: 151,
+  downloadCount: 4011981 
+}
 ```
 
 ## Contributing
