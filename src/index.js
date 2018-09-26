@@ -59,6 +59,24 @@ module.exports = async(itemName) => {
 
       obj.downloadCount = Number(installCount) + Number(updateCount)
     }
+
+    // icon
+    itemValue.versions[0].files.forEach(v => {
+      const assetType = v.assetType
+      const source = v.source
+
+      if (assetType === 'Microsoft.VisualStudio.Services.Icons.Default') obj.icon = source
+      if (assetType === 'Microsoft.VisualStudio.Services.Icons.Small') obj.smallIcon = source
+    })
+
+    // github
+    itemValue.versions[0].properties.forEach(v => {
+      const key = v.key
+      const value = v.value
+
+      if (key === 'Microsoft.VisualStudio.Services.Links.GitHub') obj.github = value
+    })
+
     return Promise.resolve(obj)
   } catch (error) {
     return Promise.reject(error.statusMessage)
