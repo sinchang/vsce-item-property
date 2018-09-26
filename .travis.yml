@@ -1,10 +1,7 @@
 language: node_js
 
 node_js:
-  - "9"
-  - "8"
-  - "6"
-  - "10"
+  - "node"
 
 script:
   - npm run test:cov
