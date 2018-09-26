@@ -1,0 +1,58 @@
+{
+  "name": "vsce-item-property",
+  "version": "0.0.0",
+  "description": "Get vsce meta information",
+  "repository": {
+    "url": "sinchang/vsce-item-property",
+    "type": "git"
+  },
+  "main": "dist/vsce-item-property.cjs.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test:cov": "jest --coverage && npm run lint",
+    "test": "npm run lint && jest",
+    "test:local": "jest",
+    "lint": "standard",
+    "prepublishOnly": "npm run build",
+    "build": "bili",
+    "semantic-release": "semantic-release"
+  },
+  "author": "sinchang <sinchangwen@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "targets": {
+                "node": "current"
+              }
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "got": "^9.2.2"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "bili": "^2.2.3",
+    "jest-cli": "^22.1.4",
+    "semantic-release": "^15.9.16",
+    "standard": "^10.0.0"
+  }
+}
