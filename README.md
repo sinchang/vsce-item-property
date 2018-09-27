@@ -31,6 +31,9 @@ vsceItemProperty('vscodevim.vim')
   downloadCount: 4011981 
 }
 ```
+## Related
+
+- [vsce-item-property-cli](https://github.com/sinchang/vsce-item-property-cli)
 
 ## Contributing
 
