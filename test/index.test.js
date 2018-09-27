@@ -7,7 +7,7 @@ test('main', () => {
 test('ok', async () => {
   const itemName = 'vscodevim.vim'
   const res = await vsceItemProperty(itemName)
-  expect(res.name).toBe('Vim')
+  expect(res.displayName).toBe('Vim')
 })
 
 test('wrong itemName', async () => {

@@ -36,7 +36,11 @@ module.exports = async(itemName) => {
 
     const obj = {
       publisherName: itemValue.publisher.publisherName,
-      name: itemValue.displayName,
+      publisherId: itemValue.publisher.publisherId,
+      publisherDisplayName: itemValue.publisher.displayName,
+      displayName: itemValue.displayName,
+      extensionName: itemValue.extensionName,
+      extensionId: itemValue.extensionId,
       lastUpdated: itemValue.lastUpdated,
       releaseDate: itemValue.releaseDate,
       publishedDate: itemValue.publishedDate,
