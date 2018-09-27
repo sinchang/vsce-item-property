@@ -19,16 +19,24 @@ vsceItemProperty('vscodevim.vim')
   .catch(err => console.log(err))
 
 // => 
-{ publisherName: 'vscodevim',
-  name: 'Vim',
-  lastUpdated: '2018-09-21T07:23:39.407Z',
-  releaseDate: '2015-11-29T10:38:55.38Z',
-  publishedDate: '2015-11-29T10:38:55.38Z',
-  shortDescription: 'Vim emulation for Visual Studio Code',
-  version: '0.16.5',
-  ratingValue: 4.284768104553223,
-  ratingCount: 151,
-  downloadCount: 4011981 
+{ 
+  publisherName:        vscodevim
+  publisherId:          5d63889b-1b67-4b1f-8350-4f1dce041a26
+  publisherDisplayName: vscodevim
+  displayName:          Vim
+  extensionName:        vim
+  extensionId:          d96e79c6-8b25-4be3-8545-0e0ecefcae03
+  lastUpdated:          2018-09-21T07:23:39.407Z
+  releaseDate:          2015-11-29T10:38:55.38Z
+  publishedDate:        2015-11-29T10:38:55.38Z
+  shortDescription:     Vim emulation for Visual Studio Code
+  version:              0.16.5
+  ratingValue:          4.284768104553223
+  ratingCount:          151
+  downloadCount:        4019936
+  icon:                 https://vscodevim.gallerycdn.vsassets.io/extensions/vscodevim/vim/0.16.5/1537514619484/Microsoft.VisualStudio.Services.Icons.Default
+  smallIcon:            https://vscodevim.gallerycdn.vsassets.io/extensions/vscodevim/vim/0.16.5/1537514619484/Microsoft.VisualStudio.Services.Icons.Small
+  github:               https://github.com/VSCodeVim/Vim.git
 }
 ```
 ## Related
