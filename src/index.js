@@ -2,7 +2,7 @@
 
 const got = require('got')
 
-module.exports = async(itemName) => {
+module.exports = async (itemName) => {
   if (typeof itemName !== 'string') {
     return Promise.reject(new Error('Expected itemName to be string'))
   }
