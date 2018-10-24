@@ -50,9 +50,9 @@
   },
   "devDependencies": {
     "babel-preset-env": "^1.4.0",
-    "bili": "^2.2.3",
-    "jest-cli": "^22.1.4",
+    "bili": "^3.1.2",
+    "jest-cli": "^23.6.0",
     "semantic-release": "^15.9.16",
-    "standard": "^10.0.0"
+    "standard": "^12.0.1"
   }
 }
